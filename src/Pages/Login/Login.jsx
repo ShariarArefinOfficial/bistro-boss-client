@@ -5,6 +5,7 @@ import {  useEffect, useState } from "react";
 import useAuthContext from "../../Hooks/useAuthContext";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2';
+import SocialLogin from '../../CommonComponent/SocialLogin/SocialLogin';
 //import { AuthContext } from '../../Providers/AuthProvider';
 
 
@@ -97,7 +98,10 @@ const Login = () => {
                                 <input disabled={disabled} className="btn btn-primary" type="submit" value="Login" />
                             </div>
                         </form>
-                        <p><small>New Here? <Link to="/signup">Create an account</Link> </small></p>
+                        <div className='text-center'>
+                        <p className="text-center"><small>New Here? <Link to="/signup">Create an account</Link> </small></p>
+                        <SocialLogin></SocialLogin>
+                        </div>
                     </div>
                 </div>
             </div>

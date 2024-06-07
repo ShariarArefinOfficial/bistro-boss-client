@@ -7,7 +7,7 @@ import MenuItem from "../../../CommonComponent/MenuItem/MenuItem";
 const PopularMenu = () => {
     const [menu, setMenu] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/menu')
+        fetch(`${import.meta.env.VITE_URL}/menu`)
             .then(res => res.json())
             .then(data => {
                 const popularItems = data.filter(item => item.category === 'popular');

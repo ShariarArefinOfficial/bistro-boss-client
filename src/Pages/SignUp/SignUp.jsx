@@ -24,7 +24,8 @@ const SignUp = () => {
                         // create user entry in the database
                         const userInfo = {
                             name: data.name,
-                            email: data.email
+                            email: data.email,
+                            password:data.password
                         }
                         axiosPublic.post('/users', userInfo)
                             .then(res => {
@@ -101,7 +102,7 @@ const SignUp = () => {
                                 <input className="btn btn-primary" type="submit" value="Sign Up" />
                             </div>
                         </form>
-                        <p><small>Already have an account <Link to="/login">Login</Link></small></p>
+                        <p className="text-center p-6"><small>Already have an account <Link to="/login">Login</Link></small></p>
                     </div>
                 </div>
             </div>
